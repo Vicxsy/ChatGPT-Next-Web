@@ -1,0 +1,183 @@
+.page {
+  min-height: 100vh;
+  color: #2f1b12;
+  background:
+    radial-gradient(circle at 15% 20%, rgb(210 162 111 / 28%), transparent 42%),
+    radial-gradient(circle at 85% 10%, rgb(115 35 18 / 20%), transparent 30%),
+    linear-gradient(180deg, #f7efdf, #efe0c3 52%, #e7d2ad);
+  padding: 64px 24px 80px;
+  display: grid;
+  gap: 34px;
+}
+
+.hero,
+.story,
+.products,
+.contact {
+  width: min(1100px, 100%);
+  margin: 0 auto;
+  border: 1px solid rgb(94 43 26 / 18%);
+  border-radius: 24px;
+  background: rgb(255 250 239 / 82%);
+  backdrop-filter: blur(2px);
+  box-shadow: 0 12px 40px rgb(72 22 13 / 14%);
+  padding: 36px;
+}
+
+.hero {
+  position: relative;
+  overflow: hidden;
+
+  &::after {
+    content: "酱";
+    position: absolute;
+    right: 16px;
+    top: -20px;
+    font-size: 180px;
+    font-weight: 700;
+    color: rgb(141 45 20 / 10%);
+  }
+
+  h1 {
+    font-size: clamp(2rem, 5vw, 4rem);
+    margin: 10px 0 12px;
+    letter-spacing: 2px;
+  }
+
+  p {
+    max-width: 720px;
+    line-height: 1.8;
+    font-size: 1.05rem;
+  }
+}
+
+.kicker {
+  color: #8d2d14;
+  letter-spacing: 0.22em;
+  font-weight: 600;
+}
+
+.ctaRow {
+  margin-top: 26px;
+  display: flex;
+  gap: 14px;
+  flex-wrap: wrap;
+
+  a,
+  button {
+    padding: 12px 20px;
+    border-radius: 999px;
+    border: 0;
+    font-weight: 600;
+    cursor: pointer;
+  }
+
+  a {
+    text-decoration: none;
+    color: #fff7e9;
+    background: linear-gradient(90deg, #8d2d14, #be5a2e);
+  }
+
+  button {
+    border: 1px solid #8d2d14;
+    background: transparent;
+    color: #8d2d14;
+  }
+}
+
+.story,
+.contact {
+  h2 {
+    margin: 0 0 10px;
+  }
+
+  p {
+    margin: 0;
+    line-height: 1.9;
+  }
+}
+
+.products {
+  h2 {
+    margin-top: 0;
+  }
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 16px;
+}
+
+.card {
+  border: 1px solid rgb(94 43 26 / 16%);
+  border-radius: 16px;
+  padding: 20px;
+  background: linear-gradient(180deg, rgb(255 255 255 / 70%), rgb(255 245 230 / 74%));
+
+  h3 {
+    margin: 0 0 8px;
+  }
+
+  p {
+    margin: 0;
+    color: #6c3a2a;
+  }
+}
+
+.metrics {
+  width: min(1100px, 100%);
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+
+  div {
+    border-radius: 18px;
+    background: #8d2d14;
+    color: #fff0d8;
+    padding: 24px;
+    text-align: center;
+  }
+
+  strong {
+    display: block;
+    font-size: 2rem;
+  }
+
+  span {
+    opacity: 0.9;
+  }
+}
+
+.contact {
+  text-align: center;
+
+  button {
+    margin-top: 16px;
+    background: #8d2d14;
+    color: #fff7e9;
+    border: 0;
+    border-radius: 999px;
+    padding: 12px 22px;
+    font-weight: 700;
+    cursor: pointer;
+  }
+}
+
+@media (max-width: 700px) {
+  .page {
+    padding-top: 28px;
+  }
+
+  .hero,
+  .story,
+  .products,
+  .contact {
+    padding: 24px;
+  }
+
+  .metrics {
+    grid-template-columns: 1fr;
+  }
+}
